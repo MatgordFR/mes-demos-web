@@ -12,7 +12,7 @@ et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framew
 ![Sans build](https://img.shields.io/badge/build-aucun-8957e5?style=flat-square)
 ![Licence](https://img.shields.io/badge/licence-ISC-2f81f7?style=flat-square)
 
-[![▶ Ouvrir le hub](https://img.shields.io/badge/%E2%96%B6_Ouvrir_le_hub-141416?style=for-the-badge)](https://matgordfr.github.io/matgord-portfolio-demos/)
+[![▶ Ouvrir le hub](https://img.shields.io/badge/%E2%96%B6_Ouvrir_le_hub-141416?style=for-the-badge)](https://matgordfr.github.io/mes-demos-web/)
 
 </div>
 
@@ -25,20 +25,20 @@ et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framew
 
 | | Démo | Métier | Démo live | Code |
 |---|---|---|---|---|
-| 🔥 | **Forno** | One-pager restauration — pizzeria, four vivant, **cuisson interactive de 90 s** | [ouvrir ↗](https://matgordfr.github.io/forno-demo/) | [forno-demo](https://github.com/MatgordFR/forno-demo) |
-| ✷ | **Sillage** | Portfolio studio créatif — **curseur custom** & **affiches génératives** | [ouvrir ↗](https://matgordfr.github.io/sillage-demo/) | [sillage-demo](https://github.com/MatgordFR/sillage-demo) |
-| 📈 | **Pouls** | Landing produit / SaaS — **board vivant**, pricing mensuel/annuel, FAQ | [ouvrir ↗](https://matgordfr.github.io/pouls-demo/) | [pouls-demo](https://github.com/MatgordFR/pouls-demo) |
+| 🔥 | **Forno** | One-pager restauration — pizzeria, four vivant, **cuisson interactive de 90 s** | [ouvrir ↗](https://matgordfr.github.io/site-restaurant/) | [site-restaurant](https://github.com/MatgordFR/site-restaurant) |
+| ✷ | **Sillage** | Portfolio studio créatif — **curseur custom** & **affiches génératives** | [ouvrir ↗](https://matgordfr.github.io/site-studio/) | [site-studio](https://github.com/MatgordFR/site-studio) |
+| 📈 | **Pouls** | Landing produit / SaaS — **board vivant**, pricing mensuel/annuel, FAQ | [ouvrir ↗](https://matgordfr.github.io/site-produit/) | [site-produit](https://github.com/MatgordFR/site-produit) |
 
 <div align="center">
 
-### 🔥 [Forno](https://matgordfr.github.io/forno-demo/)
-[![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/forno-demo/)
+### 🔥 [Forno](https://matgordfr.github.io/site-restaurant/)
+[![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/site-restaurant/)
 
-### ✷ [Sillage](https://matgordfr.github.io/sillage-demo/)
-[![Sillage](assets/thumbs/studio.jpg)](https://matgordfr.github.io/sillage-demo/)
+### ✷ [Sillage](https://matgordfr.github.io/site-studio/)
+[![Sillage](assets/thumbs/studio.jpg)](https://matgordfr.github.io/site-studio/)
 
-### 📈 [Pouls](https://matgordfr.github.io/pouls-demo/)
-[![Pouls](assets/thumbs/statut.jpg)](https://matgordfr.github.io/pouls-demo/)
+### 📈 [Pouls](https://matgordfr.github.io/site-produit/)
+[![Pouls](assets/thumbs/statut.jpg)](https://matgordfr.github.io/site-produit/)
 
 </div>
 
