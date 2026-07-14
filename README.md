@@ -2,9 +2,9 @@
 
 # 🎨 Démos front-end — MatgordFR
 
-### Trois sites, trois métiers, **zéro dépendance.**
+### Quatre sites, quatre métiers, **zéro dépendance.**
 
-Le **hub** qui rassemble mes trois démos front-end. Chacune vit dans son propre dépôt,<br>
+Le **hub** qui rassemble mes quatre démos front-end. Chacune vit dans son propre dépôt,<br>
 et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framework, sans CDN.
 
 ![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -21,15 +21,19 @@ et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framew
 
 ---
 
-## Les trois démos
+## Les quatre démos
 
 | | Démo | Métier | Démo live | Code |
 |---|---|---|---|---|
+| 📊 | **MatgordCRM** | Tableau de bord CRM / SaaS — **analytics de MRR** (waterfall, ARPU, LTV, churn) | [ouvrir ↗](https://matgordfr.github.io/site-tableau-de-bord/) | [site-tableau-de-bord](https://github.com/MatgordFR/site-tableau-de-bord) |
 | 🔥 | **Forno** | One-pager restauration — pizzeria, four vivant, **cuisson interactive de 90 s** | [ouvrir ↗](https://matgordfr.github.io/site-restaurant/) | [site-restaurant](https://github.com/MatgordFR/site-restaurant) |
 | ✷ | **Sillage** | Portfolio studio créatif — **curseur custom** & **affiches génératives** | [ouvrir ↗](https://matgordfr.github.io/site-studio/) | [site-studio](https://github.com/MatgordFR/site-studio) |
 | 📈 | **Pouls** | Landing produit / SaaS — **board vivant**, pricing mensuel/annuel, FAQ | [ouvrir ↗](https://matgordfr.github.io/site-produit/) | [site-produit](https://github.com/MatgordFR/site-produit) |
 
 <div align="center">
+
+### 📊 [MatgordCRM](https://matgordfr.github.io/site-tableau-de-bord/)
+[![MatgordCRM](assets/thumbs/crm.jpg)](https://matgordfr.github.io/site-tableau-de-bord/)
 
 ### 🔥 [Forno](https://matgordfr.github.io/site-restaurant/)
 [![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/site-restaurant/)
