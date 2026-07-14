@@ -4,42 +4,41 @@
 
 ### Trois sites, trois métiers, **zéro dépendance.**
 
-Trois pages de démonstration codées à la main pour montrer mon savoir-faire côté web.<br>
-Vanilla (HTML/CSS/JS), sans framework, sans CDN, polices auto-hébergées, graphismes SVG faits main.
+Le **hub** qui rassemble mes trois démos front-end. Chacune vit dans son propre dépôt,<br>
+et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framework, sans CDN.
 
 ![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-2ea44f?style=flat-square)
 ![Sans build](https://img.shields.io/badge/build-aucun-8957e5?style=flat-square)
-![Accessible](https://img.shields.io/badge/a11y-clavier_%2B_reduced_motion-0f7d63?style=flat-square)
 ![Licence](https://img.shields.io/badge/licence-ISC-2f81f7?style=flat-square)
 
-[![▶ Ouvrir les démos](https://img.shields.io/badge/%E2%96%B6_Ouvrir_les_d%C3%A9mos-141416?style=for-the-badge)](https://matgordfr.github.io/matgord-portfolio-demos/)
+[![▶ Ouvrir le hub](https://img.shields.io/badge/%E2%96%B6_Ouvrir_le_hub-141416?style=for-the-badge)](https://matgordfr.github.io/matgord-portfolio-demos/)
 
 </div>
 
 > [!NOTE]
-> **Projets démo.** Les entreprises, produits, personnes et données sont **entièrement fictifs** — ce sont des vitrines de savoir-faire, pas des sites en production. Tout tourne dans le navigateur, sans backend.
+> **Projets démo.** Entreprises, produits, personnes et données **entièrement fictifs** — des vitrines de savoir-faire, pas des sites en production. Tout tourne dans le navigateur, sans backend.
 
 ---
 
 ## Les trois démos
 
-| | Démo | Métier | Ce qu'elle montre |
-|---|---|---|---|
-| 🔥 | **[Forno](https://matgordfr.github.io/matgord-portfolio-demos/forno/)** | One-pager restauration | Pizzeria napolitaine, ambiance « braise », four vivant et **cuisson interactive de 90 s** |
-| ✷ | **[Sillage](https://matgordfr.github.io/matgord-portfolio-demos/studio/)** | Portfolio studio créatif | Éditorial immersif, **curseur sur mesure** et **affiches riso générées** par projet |
-| 📈 | **[Pouls](https://matgordfr.github.io/matgord-portfolio-demos/statut/)** | Landing produit / SaaS | Surveillance & page de statut : **board vivant**, pricing mensuel/annuel, FAQ dépliable |
+| | Démo | Métier | Démo live | Code |
+|---|---|---|---|---|
+| 🔥 | **Forno** | One-pager restauration — pizzeria, four vivant, **cuisson interactive de 90 s** | [ouvrir ↗](https://matgordfr.github.io/forno-demo/) | [forno-demo](https://github.com/MatgordFR/forno-demo) |
+| ✷ | **Sillage** | Portfolio studio créatif — **curseur custom** & **affiches génératives** | [ouvrir ↗](https://matgordfr.github.io/sillage-demo/) | [sillage-demo](https://github.com/MatgordFR/sillage-demo) |
+| 📈 | **Pouls** | Landing produit / SaaS — **board vivant**, pricing mensuel/annuel, FAQ | [ouvrir ↗](https://matgordfr.github.io/pouls-demo/) | [pouls-demo](https://github.com/MatgordFR/pouls-demo) |
 
 <div align="center">
 
-### 🔥 Forno
-[![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/matgord-portfolio-demos/forno/)
+### 🔥 [Forno](https://matgordfr.github.io/forno-demo/)
+[![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/forno-demo/)
 
-### ✷ Sillage
-[![Sillage](assets/thumbs/studio.jpg)](https://matgordfr.github.io/matgord-portfolio-demos/studio/)
+### ✷ [Sillage](https://matgordfr.github.io/sillage-demo/)
+[![Sillage](assets/thumbs/studio.jpg)](https://matgordfr.github.io/sillage-demo/)
 
-### 📈 Pouls
-[![Pouls](assets/thumbs/statut.jpg)](https://matgordfr.github.io/matgord-portfolio-demos/statut/)
+### 📈 [Pouls](https://matgordfr.github.io/pouls-demo/)
+[![Pouls](assets/thumbs/statut.jpg)](https://matgordfr.github.io/pouls-demo/)
 
 </div>
 
@@ -63,20 +62,17 @@ Vanilla (HTML/CSS/JS), sans framework, sans CDN, polices auto-hébergées, graph
 
 ## 📁 Structure
 
+Ce dépôt = **le hub uniquement**. Les démos sont dans leurs propres dépôts (voir la table ci-dessus).
+
 ```
 index.html            → le hub (cette page d'accueil)
-forno/                → démo 1 · pizzeria napolitaine
-studio/               → démo 2 · studio créatif « Sillage »
-statut/               → démo 3 · produit « Pouls »
-  assets/{css,js,fonts}
-assets/                → fonts + vignettes du hub
+assets/css/hub.css    → styles du hub
+assets/js/hub.js      → reveals au scroll
+assets/fonts/         → Bricolage + Space Grotesk (auto-hébergées)
+assets/thumbs/        → vignettes des trois démos
 ```
 
-Chaque démo est **autonome** : son propre HTML, CSS, JS et ses polices. On peut ouvrir n'importe quel dossier isolément.
-
 ## 🚀 Lancer en local
-
-Ouvrez `index.html` — ou servez le dossier :
 
 ```bash
 python3 -m http.server 8000
