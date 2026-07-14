@@ -1,0 +1,104 @@
+/* ============================================================
+   Hub des démos — MatgordFR · neutre sombre, les vignettes portent la couleur
+   Type : Bricolage Grotesque (display) + Space Grotesk (UI)
+   ============================================================ */
+
+@font-face{ font-family:"Bricolage"; src:url("../fonts/bricolage.woff2") format("woff2"); font-weight:200 800; font-display:swap; }
+@font-face{ font-family:"Space"; src:url("../fonts/space-grotesk.woff2") format("woff2"); font-weight:300 700; font-display:swap; }
+
+:root{
+  --bg:#141416;
+  --panel:#1b1b1e;
+  --panel-2:#212125;
+  --text:#ECEAE4;
+  --dim:#9c9a91;
+  --faint:#6f6d66;
+  --accent:#E7C98B;
+  --line:rgba(236,234,228,.12);
+  --line-soft:rgba(236,234,228,.07);
+  --font-display:"Bricolage","Trebuchet MS",sans-serif;
+  --font-ui:"Space","Helvetica Neue",sans-serif;
+  --wrap:1160px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:80px}
+body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font-ui); font-size:clamp(15.5px,1vw,17px); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2{font-family:var(--font-display); font-weight:700; line-height:1.02; margin:0; letter-spacing:-.02em}
+p{margin:0} a{color:inherit; text-decoration:none}
+img{display:block; max-width:100%}
+code{font-family:ui-monospace,"SFMono-Regular",monospace; font-size:.9em; background:var(--panel-2); padding:1px 6px; border-radius:5px}
+.wrap{width:min(var(--wrap),92vw); margin-inline:auto}
+.skip{position:absolute; left:-9999px}
+.skip:focus{position:fixed; top:12px; left:12px; z-index:100; background:var(--text); color:var(--bg); padding:10px 16px; border-radius:8px}
+
+/* nav */
+.nav{position:sticky; top:0; z-index:50; background:color-mix(in srgb,var(--bg) 84%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-soft)}
+.nav-in{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0}
+.brand{font-family:var(--font-display); font-weight:800; font-size:1.2rem; letter-spacing:-.01em}
+.brand-sub{color:var(--faint); font-weight:400; margin-left:8px}
+.nav-links{display:flex; gap:22px; font-size:.92rem; color:var(--dim)}
+.nav-links a:hover{color:var(--text)}
+
+/* buttons */
+.btn{display:inline-flex; align-items:center; gap:.35em; font-family:var(--font-ui); font-weight:600; font-size:.94rem; padding:.7em 1.3em; border-radius:10px; border:1.5px solid transparent; cursor:pointer; transition:transform .2s cubic-bezier(.2,.8,.2,1), background .2s, border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.btn-primary{background:var(--text); color:var(--bg)}
+.btn-primary:hover{background:#fff}
+.btn-ghost{border-color:var(--line); color:var(--text)}
+.btn-ghost:hover{border-color:var(--dim)}
+
+/* hero */
+.hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,64px)}
+.eyebrow{font-family:var(--font-ui); font-weight:600; text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; color:var(--accent); margin-bottom:22px}
+.hero-title{font-size:clamp(2.8rem,7.5vw,5.6rem); letter-spacing:-.03em}
+.hero-title .accent{color:var(--accent)}
+.hero-lede{font-size:clamp(1.06rem,1.4vw,1.22rem); color:var(--dim); max-width:60ch; margin-top:30px}
+.hero-note{margin-top:16px; font-size:.9rem; color:var(--faint)}
+
+/* demos */
+.demos{padding:clamp(20px,3vw,40px) 0 clamp(60px,9vw,110px)}
+.demo{display:grid; grid-template-columns:1.25fr .85fr; gap:clamp(24px,3vw,52px); align-items:center; padding:clamp(28px,4vw,44px) 0; border-top:1px solid var(--line)}
+.demo:first-child{border-top:0}
+.demo:nth-child(even) .demo-thumb{order:2}
+.demo-thumb{display:block; border-radius:14px; overflow:hidden; border:1px solid var(--line); position:relative; box-shadow:0 24px 50px -30px rgba(0,0,0,.8)}
+.demo-thumb img{width:100%; height:auto; transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.demo-thumb::after{content:"Ouvrir ↗"; position:absolute; right:12px; bottom:12px; font-family:var(--font-ui); font-weight:600; font-size:.8rem; color:var(--bg); background:var(--text); padding:6px 12px; border-radius:8px; opacity:0; transform:translateY(6px); transition:opacity .3s, transform .3s}
+.demo-thumb:hover img{transform:scale(1.03)}
+.demo-thumb:hover::after{opacity:1; transform:none}
+.demo-type{font-family:var(--font-ui); font-weight:600; text-transform:uppercase; letter-spacing:.12em; font-size:.74rem; color:var(--accent); margin-bottom:12px}
+.demo-info h2{font-size:clamp(2rem,3.4vw,2.9rem); margin-bottom:14px}
+.demo-desc{color:var(--dim); font-size:1.02rem; max-width:46ch}
+.chips{list-style:none; display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:20px 0 26px}
+.chips li{font-size:.8rem; color:var(--dim); border:1px solid var(--line); border-radius:999px; padding:5px 12px}
+.demo-cta{display:flex; gap:12px; flex-wrap:wrap}
+
+/* craft */
+.craft{padding:clamp(56px,8vw,96px) 0; border-top:1px solid var(--line); background:var(--panel)}
+.craft-title{font-size:clamp(1.6rem,3vw,2.4rem); margin-bottom:34px}
+.craft-list{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+.craft-list li{color:var(--dim); font-size:.98rem; border-left:2px solid var(--accent); padding-left:16px}
+.craft-list b{color:var(--text); font-weight:600; display:block; margin-bottom:2px}
+
+/* footer */
+.foot{padding:40px 0; border-top:1px solid var(--line)}
+.foot-in{display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; color:var(--dim); font-size:.9rem}
+.foot a{border-bottom:1px solid var(--line)}
+.foot a:hover{color:var(--text); border-color:var(--accent)}
+
+/* reveals */
+[data-reveal]{opacity:0; transform:translateY(20px); transition:opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1)}
+[data-reveal].in{opacity:1; transform:none}
+
+/* responsive */
+@media (max-width:800px){
+  .demo{grid-template-columns:1fr; gap:20px}
+  .demo:nth-child(even) .demo-thumb{order:0}
+  .craft-list{grid-template-columns:1fr}
+  .nav-links{gap:16px; font-size:.86rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important}
+  [data-reveal]{opacity:1; transform:none}
+}
