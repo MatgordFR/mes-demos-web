@@ -1,11 +1,10 @@
-/* Hub — titre animé (mot à mot) + reveals au scroll */
+/* Hub — titres animés mot à mot (hero immédiat + sections au scroll) + reveals */
 (function () {
   "use strict";
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  /* titre héro : révélation mot à mot + soulignement de « Zéro dépendance » */
-  var heroTitle = document.querySelector(".hero-title");
-  if (heroTitle && !reduce) {
+  function splitWords(el) {
     var counter = { i: 0 };
     (function wrap(container) {
       Array.prototype.slice.call(container.childNodes).forEach(function (node) {
@@ -24,13 +23,26 @@
         } else if (node.nodeType === 1 && node.tagName !== "BR") { // <span class="accent"> : garder + découper dedans
           wrap(node);
         }
-        // <br> : laissé tel quel
       });
-    })(heroTitle);
+    })(el);
   }
 
-  /* reveals au scroll */
-  var reveals = document.querySelectorAll("[data-reveal]");
+  // hero : animation immédiate au chargement
+  var hero = document.querySelector(".hero-title");
+  if (hero && !reduce) splitWords(hero);
+
+  // titres de section : animation déclenchée au scroll
+  var heads = $$(".section-h");
+  if (!reduce && "IntersectionObserver" in window) {
+    heads.forEach(splitWords);
+    var io2 = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("go"); io2.unobserve(e.target); } });
+    }, { threshold: 0.25 });
+    heads.forEach(function (el) { io2.observe(el); });
+  }
+
+  // reveals génériques (eyebrows, notes, cartes…)
+  var reveals = $$("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     reveals.forEach(function (el) { el.classList.add("in"); });
     return;
