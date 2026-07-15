@@ -52,12 +52,27 @@ code{font-family:ui-monospace,"SFMono-Regular",monospace; font-size:.9em; backgr
 .hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,64px)}
 .eyebrow{font-family:var(--font-ui); font-weight:600; text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; color:var(--accent); margin-bottom:22px}
 .hero-title{font-size:clamp(2.8rem,7.5vw,5.6rem); letter-spacing:-.03em}
-.hero-title .accent{color:var(--accent)}
+.hero-title .accent{color:var(--accent); position:relative}
+/* titre animé : mots qui montent + soulignement de « Zéro dépendance » */
+.hero-title .word{display:inline-block; opacity:0; transform:translateY(.5em); animation:wordIn .55s cubic-bezier(.2,.8,.2,1) both; animation-delay:calc(var(--i,0)*.05s)}
+@keyframes wordIn{to{opacity:1; transform:none}}
+.hero-title .accent::after{content:""; position:absolute; left:0; right:0; bottom:-.05em; height:3px; border-radius:3px; background:var(--accent); transform:scaleX(0); transform-origin:left; animation:hubUnderline .55s cubic-bezier(.2,.8,.2,1) forwards; animation-delay:1.05s}
+@keyframes hubUnderline{to{transform:scaleX(1)}}
 .hero-lede{font-size:clamp(1.06rem,1.4vw,1.22rem); color:var(--dim); max-width:60ch; margin-top:30px}
 .hero-note{margin-top:16px; font-size:.9rem; color:var(--faint)}
 
+/* sections (projets + démos partagent la grille .demo) */
+.stack{padding:clamp(30px,4.5vw,60px) 0}
+.demos-block{border-top:1px solid var(--line); background:linear-gradient(180deg,rgba(236,234,228,.015),transparent 40%)}
+.section-head{margin-bottom:clamp(8px,2vw,22px)}
+.section-eyebrow{font-family:var(--font-ui); font-weight:600; text-transform:uppercase; letter-spacing:.14em; font-size:.76rem; color:var(--accent); margin-bottom:12px}
+.section-h{font-size:clamp(1.7rem,3.4vw,2.6rem); margin-bottom:12px}
+.section-note{color:var(--faint); font-size:.92rem; max-width:58ch}
+.badge-live{display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:.7rem; font-weight:600; color:#8ad9a8; border:1px solid rgba(138,217,168,.32); border-radius:999px; padding:3px 9px 3px 8px; margin-left:10px; text-transform:none; letter-spacing:0; vertical-align:middle}
+.badge-live::before{content:""; width:7px; height:7px; border-radius:50%; background:#8ad9a8; box-shadow:0 0 0 0 rgba(138,217,168,.5); animation:blip 2.4s infinite}
+@keyframes blip{0%{box-shadow:0 0 0 0 rgba(138,217,168,.45)}70%{box-shadow:0 0 0 6px rgba(138,217,168,0)}100%{box-shadow:0 0 0 0 rgba(138,217,168,0)}}
+
 /* demos */
-.demos{padding:clamp(20px,3vw,40px) 0 clamp(60px,9vw,110px)}
 .demo{display:grid; grid-template-columns:1.25fr .85fr; gap:clamp(24px,3vw,52px); align-items:center; padding:clamp(28px,4vw,44px) 0; border-top:1px solid var(--line)}
 .demo:first-child{border-top:0}
 .demo:nth-child(even) .demo-thumb{order:2}
