@@ -25,15 +25,15 @@ et cette page les présente d'un coup d'œil. Vanilla (HTML/CSS/JS), sans framew
 
 | | Démo | Métier | Démo live | Code |
 |---|---|---|---|---|
-| 📊 | **MatgordCRM** | Tableau de bord CRM / SaaS — **analytics de MRR** (waterfall, ARPU, LTV, churn) | [ouvrir ↗](https://matgordfr.github.io/site-tableau-de-bord/) | [site-tableau-de-bord](https://github.com/MatgordFR/site-tableau-de-bord) |
+| 📊 | **Essor** | Tableau de bord CRM / SaaS — **analytics de MRR** (waterfall, ARPU, LTV, churn) | [ouvrir ↗](https://matgordfr.github.io/site-tableau-de-bord/) | [site-tableau-de-bord](https://github.com/MatgordFR/site-tableau-de-bord) |
 | 🔥 | **Forno** | One-pager restauration — pizzeria, four vivant, **cuisson interactive de 90 s** | [ouvrir ↗](https://matgordfr.github.io/site-restaurant/) | [site-restaurant](https://github.com/MatgordFR/site-restaurant) |
 | ✷ | **Sillage** | Portfolio studio créatif — **curseur custom** & **affiches génératives** | [ouvrir ↗](https://matgordfr.github.io/site-studio/) | [site-studio](https://github.com/MatgordFR/site-studio) |
 | 📈 | **Pouls** | Landing produit / SaaS — **board vivant**, pricing mensuel/annuel, FAQ | [ouvrir ↗](https://matgordfr.github.io/site-produit/) | [site-produit](https://github.com/MatgordFR/site-produit) |
 
 <div align="center">
 
-### 📊 [MatgordCRM](https://matgordfr.github.io/site-tableau-de-bord/)
-[![MatgordCRM](assets/thumbs/crm.jpg)](https://matgordfr.github.io/site-tableau-de-bord/)
+### 📊 [Essor](https://matgordfr.github.io/site-tableau-de-bord/)
+[![Essor](assets/thumbs/crm.jpg)](https://matgordfr.github.io/site-tableau-de-bord/)
 
 ### 🔥 [Forno](https://matgordfr.github.io/site-restaurant/)
 [![Forno](assets/thumbs/forno.jpg)](https://matgordfr.github.io/site-restaurant/)
